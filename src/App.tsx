@@ -7,7 +7,7 @@ import ThemeChanger from './ThemeChanger/ThemeChanger'
 
 function App() {
 
-  const [currentTheme, setCurrentTheme] = useState("http://api.kamodb.de:5000/themes/futuristic.css")
+  const [currentTheme, setCurrentTheme] = useState("https://api.kamodb.de:5000/themes/futuristic.css")
 
   function themeChange(theme: any){
     setCurrentTheme(theme)
