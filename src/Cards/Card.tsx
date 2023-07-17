@@ -16,10 +16,10 @@ function Card(props: Props) {
 
   return (
     <div className='card'>
-      <div className='card-content' onClick={() => handleClick()}>
+      <a className='card-content' href={props.url}>
           <h3>{props.name}</h3>
           <h4 className='hide'>{props.description}</h4>
-      </div>
+      </a>
     </div>
   )
 }

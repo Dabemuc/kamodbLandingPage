@@ -1,8 +1,14 @@
 import React from 'react'
 import './Navbar.css'
 import Logo from '../Kamodb-Logo.png'
+import LoginWrapper from '../LoginWrapper/LoginWrapper'
 
-export default function Navbar() {
+interface Props {
+  user: any, 
+  handleSignOut: Function
+}
+
+export default function Navbar(props: Props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark">
         <a className="navbar-brand" href="#"><img src={Logo} alt="" width="100rem" height="25rem" /></a>
@@ -30,10 +36,7 @@ export default function Navbar() {
               </div>
             </li>
           </ul>
-          <form className="form-inline my-2 my-lg-0">
-            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          <LoginWrapper user={props.user} handleSignOut={() => props.handleSignOut()} />
         </div>
       </nav>
       )
